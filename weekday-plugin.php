@@ -20,3 +20,14 @@ add_action( 'wp_enqueue_scripts', 'weekday_enqueue_scripts' );
 // Dieser Filter erlaubt das Einbinden der nachfolgenden Shortcodes im Widget-Bereich (Sidebars)
 
 add_filter( 'widget_text', 'do_shortcode' );
+
+
+// Gibt den aktuellen Wochentag aus
+
+function weekday_today() {
+	$a = shortcode_atts( array (
+        'prst' => '<script>document.write(dayZero)</script>',
+    ), $atts );
+    return  $a['prst'] ;
+} 
+add_shortcode('today', 'weekday_today');
