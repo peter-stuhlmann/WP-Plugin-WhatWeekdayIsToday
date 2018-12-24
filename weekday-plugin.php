@@ -8,3 +8,10 @@
  * Author URI: https://peter-stuhlmann-webentwicklung.de
  */
 
+
+// Integrate javascript file
+
+function weekday_enqueue_scripts() {
+ 	wp_enqueue_script( 'weekday-plugin-script', plugin_dir_url( __FILE__ ) . 'weekday-plugin-script.js', '20181224' );
+}
+add_action( 'wp_enqueue_scripts', 'weekday_enqueue_scripts' );
