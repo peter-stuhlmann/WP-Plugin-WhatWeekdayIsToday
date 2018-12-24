@@ -31,3 +31,14 @@ function weekday_today() {
     return  $a['prst'] ;
 } 
 add_shortcode('today', 'weekday_today');
+
+
+// Gibt den morgigen Wochentag aus
+
+function weekday_tomorrow() {
+	$a = shortcode_atts( array (
+        'prst' => '<script>document.write(dayOne)</script>',
+    ), $atts );
+    return  $a['prst'] ;
+} 
+add_shortcode('tomorrow', 'weekday_tomorrow');
