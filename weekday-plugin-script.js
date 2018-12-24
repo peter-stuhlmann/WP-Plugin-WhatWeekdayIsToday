@@ -10,6 +10,7 @@ switch (weekday) {
         dayTwo = "Dienstag";
         dayThree = "Mittwoch";
         dayFour = "Donnerstag";
+        dayFive = "Freitag";
         break;
     
     case 1: 
@@ -18,6 +19,7 @@ switch (weekday) {
         dayTwo = "Mittwoch";
         dayThree = "Donnerstag";
         dayFour = "Freitag";
+        dayFive = "Samstag";
         break;
     
     case 2: 
@@ -26,6 +28,7 @@ switch (weekday) {
         dayTwo = "Donnerstag";
         dayThree = "Freitag";
         dayFour = "Samstag";
+        dayFive = "Sonntag";
         break;
         
     case 3: 
@@ -34,6 +37,7 @@ switch (weekday) {
         dayTwo = "Freitag";
         dayThree = "Samstag";
         dayFour = "Sonntag";
+        dayFive = "Montag";
         break;
         
     case 4: 
@@ -42,6 +46,7 @@ switch (weekday) {
         dayTwo = "Samstag";
         dayThree = "Sonntag";
         dayFour = "Montag";
+        dayFive = "Dienstag";
         break;
         
     case 5: 
@@ -50,6 +55,7 @@ switch (weekday) {
         dayTwo = "Sonntag";
         dayThree = "Montag";
         dayFour = "Dienstag";
+        dayFive = "Mittwoch";
         break;
         
     case 6: 
@@ -58,6 +64,7 @@ switch (weekday) {
         dayTwo = "Montag";
         dayThree = "Dienstag";
         dayFour = "Mittwoch";
+        dayFive = "Donnerstag";
         break;
         
 }
