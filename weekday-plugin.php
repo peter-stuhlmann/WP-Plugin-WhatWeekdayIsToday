@@ -42,3 +42,15 @@ function weekday_tomorrow() {
     return  $a['prst'] ;
 } 
 add_shortcode('tomorrow', 'weekday_tomorrow');
+
+
+// Gibt den übermorgigen Wochentag aus
+
+function weekday_in_two_days() {
+	$a = shortcode_atts( array (
+        'prst' => '<script>document.write(dayTwo)</script>',
+    ), $atts );
+    return  $a['prst'] ;
+} 
+add_shortcode('in-2-days', 'weekday_in_two_days');
+
