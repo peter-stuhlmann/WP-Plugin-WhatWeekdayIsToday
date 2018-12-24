@@ -54,3 +54,14 @@ function weekday_in_two_days() {
 } 
 add_shortcode('in-2-days', 'weekday_in_two_days');
 
+
+// Gibt aus, welcher Wochentag in drei Tagen sein wird
+
+function weekday_in_three_days() {
+	$a = shortcode_atts( array (
+        'prst' => '<script>document.write(dayThree)</script>',
+    ), $atts );
+    return  $a['prst'] ;
+} 
+add_shortcode('in-3-days', 'weekday_in_three_days');
+
