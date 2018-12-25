@@ -77,3 +77,32 @@ function weekday_in_four_days() {
 add_shortcode('in-4-days', 'weekday_in_four_days');
 
 
+// Gibt aus, welcher Wochentag in fünf Tagen sein wird
+
+function weekday_in_five_days() {
+	$a = shortcode_atts( array (
+        'prst' => '<script>document.write(dayFive)</script>',
+    ), $atts );
+    return  $a['prst'] ;
+} 
+add_shortcode('in-5-days', 'weekday_in_five_days');
+
+
+// Gibt aus, welcher Wochentag in sechs Tagen sein wird
+
+function weekday_in_six_days() {
+	$a = shortcode_atts( array (
+        'prst' => '<script>document.write(daySix)</script>',
+    ), $atts );
+    return  $a['prst'] ;
+} 
+add_shortcode('in-6-days', 'weekday_in_six_days');
+
+
+// Action Links
+
+function weekday_action_links( $links ) {
+    $links[] = '<a href="https://www.paypal.me/prstuhlmann/2" target="_blank">Donate</a>';
+    return $links;
+}
+add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'weekday_action_links' );
