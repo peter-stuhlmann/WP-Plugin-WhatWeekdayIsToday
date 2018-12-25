@@ -108,3 +108,16 @@ function weekday_action_links( $links ) {
     return $links;
 }
 add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'weekday_action_links' );
+
+
+// 
+
+function weekday_admin_menu() {
+    $page_title = 'What weekday is today?';
+    $menu_title = 'What weekday is today?';
+    $capability = 'manage_options';
+    $menu_slug = 'weekday-settings';
+    $function = 'weekday_settings';
+    add_options_page($page_title, $menu_title, $capability, $menu_slug, $function);
+}
+add_action('admin_menu', 'weekday_admin_menu');
