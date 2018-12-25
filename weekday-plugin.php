@@ -42,6 +42,8 @@ function weekday_tomorrow() {
     return  $a['prst'] ;
 } 
 add_shortcode('tomorrow', 'weekday_tomorrow');
+add_shortcode('in-1-day', 'weekday_tomorrow');
+
 
 
 // Gibt den übermorgigen Wochentag aus
