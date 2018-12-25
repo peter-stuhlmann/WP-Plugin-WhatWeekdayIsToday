@@ -110,7 +110,7 @@ function weekday_action_links( $links ) {
 add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'weekday_action_links' );
 
 
-// 
+// Admin Menu
 
 function weekday_admin_menu() {
     $page_title = 'What weekday is today?';
@@ -121,3 +121,12 @@ function weekday_admin_menu() {
     add_options_page($page_title, $menu_title, $capability, $menu_slug, $function);
 }
 add_action('admin_menu', 'weekday_admin_menu');
+
+
+// Plugin Infopage
+
+function weekday_settings() {
+    if (!current_user_can('manage_options')) {
+        wp_die('Deine Benutzereinstellungen erlauben Dir keinen Zugriff auf diese Seite.');
+    } echo '';
+}
