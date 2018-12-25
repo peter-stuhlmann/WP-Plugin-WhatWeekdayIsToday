@@ -128,5 +128,80 @@ add_action('admin_menu', 'weekday_admin_menu');
 function weekday_settings() {
     if (!current_user_can('manage_options')) {
         wp_die('Deine Benutzereinstellungen erlauben Dir keinen Zugriff auf diese Seite.');
-    } echo '';
+    } echo '
+    <main>
+        <h1>What day is today?</h1>
+        <hr>
+        <div class="responsive-table">
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Shortcode</th>
+                        <th>Weekday</th>
+                    </tr>
+                    <tr>
+                        <td>[today]</td>
+                        <td>n</td>
+                    </tr>
+                    <tr>
+                        <td>[todayOne]</td>
+                        <td>n + 1</td>
+                    </tr>
+                    <tr>
+                        <td>[todayTwo]</td>
+                        <td>n + 2</td>
+                    </tr>
+                    <tr>
+                        <td>[todayThree]</td>
+                        <td>n + 3</td>
+                    </tr>
+                    <tr>
+                        <td>[todayFour]</td>
+                        <td>n + 4</td>
+                    </tr>
+                    <tr>
+                        <td>[todayFive]</td>
+                        <td>n + 5</td>
+                    </tr>
+                    <tr>
+                        <td>[todaySix]</td>
+                        <td>n + 6</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>Example</h2>
+
+        <div class="responsive-table">
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Type in ...</th>
+                        <th>The result will be ...</th>
+                    </tr>
+                    <tr>
+                        <td>Today is [today].</td>
+                        <td>Today is Saturday.</td>
+                    </tr>
+                    <tr>
+                        <td>Tomorrow is [todayOne].</td>
+                        <td>Tomorrow is Sunday.</td>
+                    </tr>
+                    <tr>
+                        <td>In 4 days is [todayFour].</td>
+                        <td>In 4 days is Wednesday.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer class="donate-box">
+        <hr>
+        <a href="https://www.paypal.me/prstuhlmann/2" data-link="https://www.paypal.me/prstuhlmann/2" target="_blank">Buy me a coke!</a>
+        <h3>Buy me a coke !</h3>
+        <p>Thank you for using Weekday Output. If you found the plugin useful buy me a coke! Your donation will motivate and make me happy for all the efforts. You can donate via PayPal.</p>
+    </footer>
+    ';
 }
